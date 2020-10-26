@@ -7,18 +7,18 @@ PyQT5のサンプルコードです。
 ## 動作確認に使用した環境
 
 - Ubuntu 18.04
-- Python 3
+- Python 3.6
 
 ## 前提作業
 
 以下のパッケージをインストールして下さい。
 
+    $ sudo apt install python3-pyqt5 pyqt5-dev-tools qttools5-dev-tools fonts-noto
+
 * python3-pyqt5
 * pyqt5-dev-tools
 * qttools5-dev-tools
 * fonts-noto (表示するフォントとして使用します)
-
-    $ sudo apt install python3-pyqt5 pyqt5-dev-tools qttools5-dev-tools fonts-noto
 
 ## 使い方
 
@@ -36,7 +36,7 @@ PyQT5のサンプルコードです。
 | 02.menu | メニューを表示する |
 | 03.multi_windows | 複数のウィンドウ(メインウィンドウとサブウィンドウ)を表示する |
 
-(3) \_ui の付いていないPythonのコードを実行します。
+(3) '\_ui' の付いていないPythonのコードを実行します。
 
     例.
     $ python hello.py
