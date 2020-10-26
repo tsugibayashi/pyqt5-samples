@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SubWindow</class>
+ <widget class="QWidget" name="SubWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>200</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Noto Sans CJK JP</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>サブウィンドウ</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>75</y>
+     <width>124</width>
+     <height>44</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>閉じる</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
