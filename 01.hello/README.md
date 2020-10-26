@@ -28,7 +28,7 @@
 
 (2) サンプルの格納されたディレクトリに移動します。
 
-    $ cd pyqt5-samples/hello/
+    $ cd pyqt5-samples/01.hello/
 
 (3) '\_ui' の付いていないPythonのコードを実行します。
 
@@ -40,15 +40,15 @@
 
     $ /usr/lib/qt5/bin/designer &
 
-(2) Main Window を選択し、画面サイズを指定する。
+(2) Main Window を選択し、画面サイズを指定します。
 
 | 項目 | 値 |
 ----|----
 | 画面サイズ | デフォルトのサイズ |
 
-(3) [作成]を押下する。
+(3) [作成]を押下します。
 
-(4) QMainWindow の設定を行う。
+(4) QMainWindow の設定を行います。
 
 | 項目 | 値 |
 ----|----
@@ -59,9 +59,9 @@
 | font | Noto Sans CJK JP,9 |
 | windowTitle | Hello, PyQT5 |
 
-(5) メニューバーを右クリックし、メニューバーを削除する。
+(5) メニューバーを右クリックし、メニューバーを削除します。
 
-(6) ラベルを追加する。
+(6) ラベルを追加します。
 
 | 項目 | 値 |
 ----|----
@@ -74,17 +74,17 @@
 | font | Noto Sans CJK JP,9 |
 | text | Hello, PyQT5 application |
 
-(7) hello.ui という名前で保存する。
+(7) hello.ui という名前で保存します。
 
-(8) pyuic5 を使って、Pythonのコードを生成する。
+(8) pyuic5 を使って、Pythonのコードを生成します。
 
     $ pyuic5 hello.ui > hello_ui.py
 
-(9) メインのコード hello.py を作成する。
+(9) メインのコード hello.py を作成します。
 
     $ vi hello.py
 
-(10) 作成したメインのコードを実行する。
+(10) 作成したメインのコードを実行します。
 
     $ python hello.py
 
