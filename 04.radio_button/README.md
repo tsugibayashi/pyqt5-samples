@@ -1,8 +1,8 @@
-# multi\_windows.py
+# radio\_button.py
 
 ## 概要
 
-ウィンドウ内のボタンをクリックすると、別のウィンドウを表示するサンプルコードです。
+ウィンドウ内のボタンをクリックすると、ラジオボタンの選択画面が表示されるサンプルコードです。
 
 ## 動作確認に使用した環境
 
@@ -28,11 +28,11 @@
 
 (2) サンプルの格納されたディレクトリに移動します。
 
-    $ cd pyqt5-samples/03.multi_windows/
+    $ cd pyqt5-samples/04.radio_button/
 
 (3) '\_ui' の付いていないPythonのコードを実行します。
 
-    $ python multi_windows.py
+    $ python radio_button.py
 
 ## コードの作成手順
 
@@ -56,7 +56,7 @@
 ----|----
 | Main Window | QMainWindow |
 | geometry | - |
-| 幅 | 300 |
+| 幅 | 350 |
 | 高さ | 250 |
 | font | Noto Sans CJK JP,9 |
 | windowTitle | メインウィンドウ |
@@ -69,12 +69,12 @@
 ----|----
 | pushButton | QPushButton |
 | geometry | - |
-| X | 30 |
-| Y | 60 |
-| 幅 | 231 |
+| X | 80 |
+| Y | 100 |
+| 幅 | 180 |
 | 高さ | 44 |
 | font | Noto Sans CJK JP,9 |
-| text | サブウィンドウを開く |
+| text | 選択画面を開く |
 
 (7) 2つめのPushButtonを追加します。
 
@@ -82,16 +82,30 @@
 ----|----
 | pushButton\_2 | QPushButton |
 | geometry | - |
-| X | 80 |
-| Y | 150 |
+| X | 110 |
+| Y | 160 |
 | 幅 | 128 |
 | 高さ | 44 |
 | font | Noto Sans CJK JP,9 |
 | text | 閉じる |
 
-(8) main\_window.ui という名前で保存します。
+(8) ラベルを追加します。
 
-(9) pyuic5 を使って、Pythonのコードを生成します。
+| 項目 | 値 |
+----|----
+| label | QLabel |
+| geometry | - |
+| X | 20 |
+| Y | 40 |
+| 幅 | 300 |
+| 高さ | 32 |
+| font | Noto Sans CJK JP,9 |
+| styleSheet | background-color: rgb(0, 255, 0) |
+| text | 設定値に応じて背景色が変わる |
+
+(9) main\_window.ui という名前で保存します。
+
+(10) pyuic5 を使って、Pythonのコードを生成します。
 
     $ pyuic5 main_window.ui > main_window_ui.py
 
@@ -119,36 +133,79 @@
 | 幅 | 400 |
 | 高さ | 200 |
 | font | Noto Sans CJK JP,9 |
-| windowTitle | サブウィンドウ |
+| windowTitle | 選択画面 |
 
-(5) PushButtonを追加します。
+(5) 1つめのRadioButtonを追加します。
+
+| 項目 | 値 |
+----|----
+| radioButton | QRadioButton |
+| geometry | - |
+| X | 20 |
+| Y | 70 |
+| 幅 | 162 |
+| 高さ | 38 |
+| font | Noto Sans CJK JP,9 |
+| text | 緑色 |
+
+(6) 2つめのRadioButtonを追加します。
+
+| 項目 | 値 |
+----|----
+| radioButton\_2 | QRadioButton |
+| geometry | - |
+| X | 155 |
+| Y | 70 |
+| 幅 | 162 |
+| 高さ | 38 |
+| font | Noto Sans CJK JP,9 |
+| text | 黄色 |
+
+(7) 3つめのRadioButtonを追加します。
+
+| 項目 | 値 |
+----|----
+| radioButton\_3 | QRadioButton |
+| geometry | - |
+| X | 290 |
+| Y | 70 |
+| 幅 | 162 |
+| 高さ | 38 |
+| font | Noto Sans CJK JP,9 |
+| text | 青色 |
+
+(8) Ctrlを押しながら3つのRadioButtonをクリックします。
+
+(9) radioButtonを右クリックし、ボタングループに割り当て->新しいボタングループ を選択します。
+
+(10) PushButtonを追加します。
 
 | 項目 | 値 |
 ----|----
 | pushButton | QPushButton |
 | geometry | - |
 | X | 130 |
-| Y | 75 |
-| 幅 | 124 |
+| Y | 140 |
+| 幅 | 128 |
 | 高さ | 44 |
 | font | Noto Sans CJK JP,9 |
-| text | 閉じる |
+| text | OK |
 
-(6) sub\_window.ui という名前で保存します。
+(11) sub\_window.ui という名前で保存します。
 
-(7) pyuic5 を使って、Pythonのコードを生成します。
+(12) pyuic5 を使って、Pythonのコードを生成します。
 
     $ pyuic5 sub_window.ui > sub_window_ui.py
 
 ### メインのコードを作成
 
-(1) メインのコード multi\_windows.py を作成します。
+(1) メインのコード radio\_button.py を作成します。
 
-    $ vi multi_windows.py
+    $ vi radio_button.py
 
 (2) 作成したメインのコードを実行します。
 
-    $ python multi_windows.py
+    $ python radio_button.py
 
 (3) メインウィンドウ内の (サブウィンドウを開く)ボタンをクリックし、サブウィンドウが表示されることを確認します。
 
