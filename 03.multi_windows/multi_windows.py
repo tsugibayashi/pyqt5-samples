@@ -14,7 +14,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # サブウィンドウを追加
         self.sub_window  = SubWindow()
 
-        # pushButton をクリックしたとら、サブウィンドウを表示する
+        # pushButton をクリックしたら、サブウィンドウを表示する
         self.pushButton.clicked.connect(self.open_sub_window)
         # pushButton_2 をクリックしたら、閉じる
         self.pushButton_2.clicked.connect(qApp.quit)
