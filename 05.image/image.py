@@ -2,7 +2,6 @@
 # -*- coding: utf8 -*-
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow
-from PyQt5.QtGui import QPixmap
 from image_ui import Ui_MainWindow
 
 class MainWindow(QMainWindow, Ui_MainWindow):

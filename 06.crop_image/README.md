@@ -1,8 +1,8 @@
-# image.py
+# crop\_image.py
 
 ## 概要
 
-ウィンドウ内に画像を表示するサンプルコードです。
+ウィンドウ内に切り抜いた画像を表示するサンプルコードです。
 
 ## 動作確認に使用した環境
 
@@ -28,11 +28,11 @@
 
 (2) サンプルの格納されたディレクトリに移動します。
 
-    $ cd pyqt5-samples/05.image/
+    $ cd pyqt5-samples/06.crop_image/
 
 (3) '\_ui' の付いていないPythonのコードを実行します。
 
-    $ python image.py
+    $ python crop_image.py
 
 ## コードの作成手順
 
@@ -63,7 +63,7 @@
 
 (6) ステータスバーを右クリックし、ステータスバーを削除します。
 
-(7) ラベルを追加します。
+(7) 1つ目のラベルを追加します。
 
 | 項目 | 値 |
 ----|----
@@ -74,26 +74,39 @@
 | 幅 | 525 |
 | 高さ | 570 |
 | font | Noto Sans CJK JP,9 |
-| text | テスト画像 |
 | pixmap | images/board.png |
 
-(8) image.ui という名前で保存します。
+(8) 2つ目のラベルを追加します。
 
-(9) pyuic5 を使って、Pythonのコードを生成します。
+| 項目 | 値 |
+----|----
+| label\_2 | QLabel |
+| geometry | - |
+| X | 225 |
+| Y | 455 |
+| 幅 | 97 |
+| 高さ | 106 |
+| font | Noto Sans CJK JP,9 |
+| text | 駒の画像 |
+
+(9) image.ui という名前で保存します。
+
+(10) pyuic5 を使って、Pythonのコードを生成します。
 
     $ pyuic5 image.ui > image_ui.py
 
-(10) 画像を images/ に格納します。
+(11) 画像を images/ に格納します。
 
 | ファイル名 | 説明 |
 ----|----
 | board.png | 5×5の将棋盤の画像 |
+| piece\_v2\_776\_636.png | 駒の画像 |
 
-(11) メインのコード image.py を作成します。
+(12) メインのコード crop\_image.py を作成します。
 
-    $ vi image.py
+    $ vi crop_image.py
 
-(12) 作成したメインのコードを実行します。
+(13) 作成したメインのコードを実行します。
 
-    $ python image.py
+    $ python crop_image.py
 
