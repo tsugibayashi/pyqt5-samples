@@ -2,11 +2,7 @@
 
 ## 概要
 
-このディレクトリ内の画像ファイルの元データは、[GitHub - tsugibayashi/MyShogiImages](https://github.com/tsugibayashi/MyShogiImages) にあります。
-
-## ライセンス
-
-[cc0-1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.ja)
+このディレクトリ内のいくつかの画像ファイルは、[GitHub - tsugibayashi/MyShogiImages](https://github.com/tsugibayashi/MyShogiImages) にも存在します。
 
 
 以上
