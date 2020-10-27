@@ -1,9 +1,8 @@
-# mousemove\_image.py
+# table.py
 
 ## 概要
 
-ウィンドウ内の駒の画像を移動するサンプルコードです。
-(マウス操作で移動できます)
+ウィンドウ内に表を表示するサンプルコードです。
 
 ## 動作確認に使用した環境
 
@@ -29,11 +28,11 @@
 
 (2) サンプルの格納されたディレクトリに移動します。
 
-    $ cd pyqt5-samples/08.mousemove_image/
+    $ cd pyqt5-samples/09.table/
 
 (3) '\_ui' の付いていないPythonのコードを実行します。
 
-    $ python mousemove_image.py
+    $ python table.py
 
 ## コードの作成手順
 
@@ -55,59 +54,38 @@
 ----|----
 | Main Window | QMainWindow |
 | geometry | - |
-| 幅 | 545 |
-| 高さ | 590 |
+| 幅 | 240 |
+| 高さ | 500 |
 | font | Noto Sans CJK JP,9 |
-| windowTitle | 画像のテスト |
+| windowTitle | 表のテスト |
 
 (5) メニューバーを右クリックし、メニューバーを削除します。
 
 (6) ステータスバーを右クリックし、ステータスバーを削除します。
 
-(7) 1つ目のラベルを追加します。
+(7) Table View を追加します。
 
 | 項目 | 値 |
 ----|----
-| label | QLabel |
+| tableView | QTableView |
 | geometry | - |
 | X | 10 |
-| Y | 10 |
-| 幅 | 525 |
-| 高さ | 570 |
+| Y | 20 |
+| 幅 | 220 |
+| 高さ | 460 |
 | font | Noto Sans CJK JP,9 |
-| pixmap | images/board.png |
 
-(8) 2つ目のラベルを追加します。
+(8) table.ui という名前で保存します。
 
-| 項目 | 値 |
-----|----
-| label\_2 | QLabel |
-| geometry | - |
-| X | 225 |
-| Y | 455 |
-| 幅 | 97 |
-| 高さ | 106 |
-| font | Noto Sans CJK JP,9 |
-| text | 駒の画像 |
+(9) pyuic5 を使って、Pythonのコードを生成します。
 
-(9) image.ui という名前で保存します。
+    $ pyuic5 table.ui > table_ui.py
 
-(10) pyuic5 を使って、Pythonのコードを生成します。
+(10) メインのコード table.py を作成します。
 
-    $ pyuic5 image.ui > image_ui.py
+    $ vi table.py
 
-(11) 画像を ../images/ に格納します。
+(11) 作成したメインのコードを実行します。
 
-| ファイル名 | 説明 |
-----|----
-| board.png | 5×5の将棋盤の画像 |
-| piece\_v2\_776\_636.png | 駒の画像 |
-
-(12) メインのコード mousemove\_image.py を作成します。
-
-    $ vi mousemove_image.py
-
-(13) 作成したメインのコードを実行します。
-
-    $ python mousemove_image.py
+    $ python table.py
 
