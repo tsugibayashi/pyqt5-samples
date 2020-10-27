@@ -13,18 +13,31 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # 切り取る対象の画像
         self.piece = QtGui.QPixmap('../images/piece_v2_776_636.png')
 
+        #  駒のサイズ
+        piece_sizex = 97
+        piece_sizey = 106
+
         # 切り取る画像の始点 (先手の王)
-        self.crop_posx = 97 * 0
-        self.crop_posy = 106 * 1
+        self.crop_posx = piece_sizex * 0
+        self.crop_posy = piece_sizey * 1
         # 切り取る画像の始点 (先手の龍)
-        #self.crop_posx = 97 * 6
-        #self.crop_posy = 106 * 4
+        #self.crop_posx = piece_sizex * 6
+        #self.crop_posy = piece_sizey * 4
         # 切り取る画像の範囲
-        self.crop_width = 97
-        self.crop_height = 106
+        self.crop_width = piece_sizex
+        self.crop_height = piece_sizey
 
         # 切り取った画像を表示する
         self.cropImage()
+
+        # 切り取った画像の場所を標準出力する
+        label2_posx = self.label_2.x()
+        label2_posy = self.label_2.y()
+        print('x:', label2_posx)
+        print('y:', label2_posy)
+
+        # 切り取った画像を上に1マス移動する
+        self.label_2.move(label2_posx, label2_posy - piece_sizey * 1 - 1)
 
     def cropImage(self):
         # 切り取る範囲

@@ -75,7 +75,7 @@
 | 高さ | 570 |
 | font | Noto Sans CJK JP,9 |
 | text | テスト画像 |
-| pixmap | images/board.png |
+| pixmap | ../images/board.png |
 
 (8) image.ui という名前で保存します。
 

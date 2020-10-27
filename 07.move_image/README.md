@@ -1,8 +1,9 @@
-# crop\_image.py
+# move\_image.py
 
 ## 概要
 
-ウィンドウ内に切り抜いた画像を表示するサンプルコードです。
+ウィンドウ内の駒の画像を移動するサンプルコードです。
+(マウス操作には対応していません)
 
 ## 動作確認に使用した環境
 
@@ -28,11 +29,11 @@
 
 (2) サンプルの格納されたディレクトリに移動します。
 
-    $ cd pyqt5-samples/06.crop_image/
+    $ cd pyqt5-samples/07.move_image/
 
 (3) '\_ui' の付いていないPythonのコードを実行します。
 
-    $ python crop_image.py
+    $ python move_image.py
 
 ## コードの作成手順
 
@@ -74,7 +75,7 @@
 | 幅 | 525 |
 | 高さ | 570 |
 | font | Noto Sans CJK JP,9 |
-| pixmap | ../images/board.png |
+| pixmap | images/board.png |
 
 (8) 2つ目のラベルを追加します。
 
@@ -102,11 +103,11 @@
 | board.png | 5×5の将棋盤の画像 |
 | piece\_v2\_776\_636.png | 駒の画像 |
 
-(12) メインのコード crop\_image.py を作成します。
+(12) メインのコード move\_image.py を作成します。
 
-    $ vi crop_image.py
+    $ vi move_image.py
 
 (13) 作成したメインのコードを実行します。
 
-    $ python crop_image.py
+    $ python move_image.py
 
