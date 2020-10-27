@@ -40,7 +40,8 @@ PyQT5のサンプルコードです。
 | 06.crop\_image | 5×5将棋盤の上に、大きな画像の一部を切り抜いた画像を表示する |
 | 07.move\_image | 5×5将棋盤の上に置かれた駒を1マス移動する (マウス操作には非対応) |
 | 08.move\_image\_with\_mouse | 5×5将棋盤の上に置かれた駒を移動する (マウス操作に対応) |
-| 09.table | 表(QTableView) を表示する |
+| 09.table | 表(QTableView)を表示する |
+| 10.table2 | QScrollArea内に表(QTableView)を表示する |
 
 (3) '\_ui' の付いていないPythonのコードを実行します。
 
