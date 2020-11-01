@@ -42,6 +42,7 @@ PyQT5のサンプルコードです。
 | 08.move\_image\_with\_mouse | 5×5将棋盤の上に置かれた駒を移動する (マウス操作に対応) |
 | 09.table | 表(QTableView)を表示する |
 | 10.table2 | QScrollArea内に表(QTableView)を表示する |
+| 11.table3 | 表(QTableWidget)を表示する |
 
 (3) '\_ui' の付いていないPythonのコードを実行します。
 
