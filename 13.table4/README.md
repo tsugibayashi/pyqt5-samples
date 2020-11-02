@@ -1,8 +1,8 @@
-# text\_edit.py
+# table4.py
 
 ## 概要
 
-ウィンドウ内にテキスト編集画面を表示するサンプルコードです。
+テキストファイルの内容を表に表示するサンプルコードです。
 
 ## 動作確認に使用した環境
 
@@ -28,11 +28,11 @@
 
 (2) サンプルの格納されたディレクトリに移動します。
 
-    $ cd pyqt5-samples/12.text_edit/
+    $ cd pyqt5-samples/13.table4/
 
 (3) '\_ui' の付いていないPythonのコードを実行します。
 
-    $ python text_edit.py
+    $ python table4.py
 
 ## コードの作成手順
 
@@ -54,10 +54,10 @@
 ----|----
 | Main Window | QMainWindow |
 | geometry | - |
-| 幅 | 800 |
-| 高さ | 560 |
+| 幅 | 240 |
+| 高さ | 530 |
 | font | Noto Sans CJK JP,9 |
-| windowTitle | テキストエディタ |
+| windowTitle | 表のテスト |
 
 (5) ステータスバーを右クリックし、ステータスバーを削除します。
 
@@ -69,47 +69,38 @@ menubar: QMenuBar に menu: QMenu が追加されます。
 ----|----
 | メニューバー | ファイル |
 
-(7) メニューバーに追加した”ファイル"をクリックし、値を設定します。
+(7) メニューバーに追加した"ファイル"をクリックし、値を設定します。
 
 actionExit: QAction が追加されます。
 
 | 項目 | 値 |
 ----|----
 | "ファイル"内の項目 | Open |
-| "ファイル"内の項目 | Save |
-| "ファイル"内の項目 | Save As |
 | "ファイル"内の項目 | Exit |
 
-(8) actionOpen, actionSave, actionSave\_As, actionExit を選択し、値を設定します。
+(8) actionOpen と actionExit を選択し、値を設定します。
 
 | 項目 | 値 |
 ----|----
 | font | Noto Sans CJK JP,9 |
 
-(9) Text Edit を追加します。
+(9) table4.ui という名前で保存します。
 
-| 項目 | 値 |
-----|----
-| textEdit | QTextEdit |
-| geometry | - |
-| X | 10 |
-| Y | 10 |
-| 幅 | 780 |
-| 高さ | 500 |
-| font | Noto Sans CJK JP,9 |
+(10) pyuic5 を使って、Pythonのコードを生成します。
 
-(10) text\_edit.ui という名前で保存します。
+    $ pyuic5 table4.ui > table4_ui.py
 
-(11) pyuic5 を使って、Pythonのコードを生成します。
+(11) メインのコード table4.py を作成します。
 
-    $ pyuic5 text_exit.ui > text_edit_ui.py
+    $ vi table4.py
 
-(12) メインのコード text\_edit.py を作成します。
+(12) 読み込みに使用するテキストファイルを作成します。
 
-    $ vi text_edit.py
+    $ vi kifu.txt
 
 (13) 作成したメインのコードを実行します。
 
-    $ python text_edit.py
+    $ python table4.py
 
+(14) ファイル-\>Open を選択して、kifu.txt を開きます。
 

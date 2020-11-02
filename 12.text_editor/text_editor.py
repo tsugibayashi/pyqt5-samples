@@ -4,7 +4,7 @@ import sys
 import os
 from PyQt5.QtWidgets import QApplication, QMainWindow, qApp, QFileDialog
 from PyQt5 import QtCore
-from text_edit_ui import Ui_MainWindow
+from text_editor_ui import Ui_MainWindow
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
