@@ -43,6 +43,7 @@ PyQT5のサンプルコードです。
 | 09.table | 表(QTableView)を表示する |
 | 10.table2 | QScrollArea内に表(QTableView)を表示する |
 | 11.table3 | 表(QTableWidget)を表示する |
+| 12.text\_edit | 簡易のテキストエディタを表示する |
 
 (3) '\_ui' の付いていないPythonのコードを実行します。
 
