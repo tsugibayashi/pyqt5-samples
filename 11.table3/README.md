@@ -67,7 +67,7 @@
 
 | 項目 | 値 |
 ----|----
-| tableView | QTableView |
+| tableWidget | QTableWidget |
 | geometry | - |
 | X | 10 |
 | Y | 20 |

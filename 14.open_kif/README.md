@@ -1,8 +1,8 @@
-# table4.py
+# open\_kif.py
 
 ## 概要
 
-テキストファイルの内容を表に表示するサンプルコードです。
+KIF形式の棋譜を表に表示するサンプルコードです。
 
 ## 動作確認に使用した環境
 
@@ -28,11 +28,11 @@
 
 (2) サンプルの格納されたディレクトリに移動します。
 
-    $ cd pyqt5-samples/13.table4/
+    $ cd pyqt5-samples/14.open_kif/
 
 (3) '\_ui' の付いていないPythonのコードを実行します。
 
-    $ python table4.py
+    $ python open_kif.py
 
 ## コードの作成手順
 
@@ -54,10 +54,10 @@
 ----|----
 | Main Window | QMainWindow |
 | geometry | - |
-| 幅 | 240 |
+| 幅 | 260 |
 | 高さ | 530 |
 | font | Noto Sans CJK JP,9 |
-| windowTitle | 表のテスト |
+| windowTitle | 棋譜ビューア |
 
 (5) ステータスバーを右クリックし、ステータスバーを削除します。
 
@@ -92,27 +92,33 @@ actionExit: QAction が追加されます。
 | geometry | - |
 | X | 10 |
 | Y | 20 |
-| 幅 | 220 |
+| 幅 | 240 |
 | 高さ | 460 |
 | font | Noto Sans CJK JP,9 |
 
-(10) table4.ui という名前で保存します。
+(10) kifu.ui という名前で保存します。
 
 (11) pyuic5 を使って、Pythonのコードを生成します。
 
-    $ pyuic5 table4.ui > table4_ui.py
+    $ pyuic5 kifu.ui > kifu_ui.py
 
-(12) メインのコード table4.py を作成します。
+(12) 棋譜読み込み用のコード parser.py を作成します。
 
-    $ vi table4.py
+    $ vi parser.py
 
-(13) 読み込みに使用するテキストファイルを作成します。
+(13) 読み込みに使用するKIF形式のファイルを作成します。(文字コードはUTF-8にします)
 
-    $ vi kifu.txt
+| 項目 | 値 |
+----|----
+| ファイル名 | MyShogi\_20201017105219.kif |
 
-(14) 作成したメインのコードを実行します。
+(14) メインのコード open\_kif.py を作成します。
 
-    $ python table4.py
+    $ vi open_kif.py
 
-(15) ファイル-\>Open を選択して、kifu.txt を開きます。
+(15) 作成したメインのコードを実行します。
+
+    $ python open_kif.py
+
+(16) ファイル-\>Open を選択して、MyShogi\_20201017105219.kif を開きます。
 
