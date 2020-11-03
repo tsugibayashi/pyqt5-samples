@@ -34,11 +34,17 @@ class Parser:
             else:
                 # 半角スペースで分割し、指し手を取得する
                 move = line.split(' ')
-                # moves に指し手を追加する
-                if turn == Parser.BLACK:
-                    moves.append('▲' + move[1])
+
+                # 投了と千日手のときは、指し手の先頭に記号を付けない
+                if move[1] == '投了' or move[1] == '千日手':
+                    moves.append(move[1])
                 else:
-                    moves.append('△' + move[1])
+                    # moves に指し手を追加する
+                    if turn == Parser.BLACK:
+                        moves.append('▲' + move[1])
+                    else:
+                        moves.append('△' + move[1])
+
                 # 手番を切り替える
                 turn = turn ^ 1
 

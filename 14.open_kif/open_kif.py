@@ -2,6 +2,7 @@
 # -*- coding: utf8 -*-
 import sys
 import os
+import cchardet
 from PyQt5.QtWidgets import (QApplication, QMainWindow, 
                             QTableWidgetItem, QHeaderView, 
                             qApp, QFileDialog)
@@ -13,6 +14,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+
+        # カレントディレクトリ
+        self.dirname = os.getcwd()
 
         # ヘッダの設定
         self.configureHeader()
@@ -61,17 +65,30 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.tableWidget.setItem(row, column, QTableWidgetItem(str))
     # }}}
 
+    # def openFile(self): {{{
     def openFile(self):
-        # カレントディレクトリを選択する
-        dirname = os.getcwd()
-
         # ファイルダイアログを表示する
-        filename = QFileDialog.getOpenFileName(self, 'ファイルを開く', dirname,
+        filename = QFileDialog.getOpenFileName(self, 
+                               'ファイルを開く', self.dirname,
                                '棋譜ファイル (*.kif);;全て (*.*)')
 
-        # ファイルが指定された場合、ファイルを読み込む
         if filename[0]:
-            kif = Parser.parse_file(filename[0], 'utf-8')[0]
+            # ファイルの文字コードを判別する
+            fileEnc = self.detectEncoding(filename[0])
+
+            if fileEnc == 'UTF-8-SIG' or fileEnc == 'UTF-8':
+                enc = 'utf_8'
+            # ISO-8859-7 と誤認識された場合、SHIFT-JIS と判断する
+            elif fileEnc == 'SHIFT_JIS' or fileEnc == 'ISO-8859-7':
+                enc = 'shift_jis'
+
+            # ファイルから棋譜を読み込む
+            kif = Parser.parse_file(filename[0], enc)[0]
+
+            # 表のデータを全て消去する
+            self.tableWidget.clearContents()
+            # 行数を0に設定する
+            self.tableWidget.setRowCount(0)
 
             # 表の各行の値を設定する
             i = 0
@@ -83,6 +100,19 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
             # ウィンドウタイトルにファイル名を表示する
             self.setWindowTitle(os.path.basename(filename[0]))
+
+            # カレントディレクトリを開いたファイルの場所に変更する
+            self.dirname = os.path.dirname(filename[0])
+    # }}}
+
+    def detectEncoding(self, filename):
+        # ファイルをバイナリモードで開く
+        with open(filename, 'rb') as f:
+            b = f.read()
+        #print(cchardet.detect(b))
+
+        # 検出した文字コードを返す
+        return cchardet.detect(b)['encoding']
 
 
 if __name__ == '__main__':

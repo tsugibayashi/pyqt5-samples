@@ -11,7 +11,7 @@ KIF形式の棋譜を表に表示するサンプルコードです。
 
 ## 前提作業
 
-以下のパッケージをインストールして下さい。
+(1) 以下のパッケージをインストールして下さい。
 
     $ sudo apt install python3-pyqt5 pyqt5-dev-tools qttools5-dev-tools fonts-noto
 
@@ -19,6 +19,10 @@ KIF形式の棋譜を表に表示するサンプルコードです。
 * pyqt5-dev-tools
 * qttools5-dev-tools
 * fonts-noto (表示するフォントとして使用します)
+
+(2) ファイルの文字コードを判別するために、cchardet をインストールします。
+
+    $ pip install cchardet
 
 ## 使い方
 
