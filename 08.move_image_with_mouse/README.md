@@ -75,7 +75,7 @@
 | 幅 | 525 |
 | 高さ | 570 |
 | font | Noto Sans CJK JP,9 |
-| pixmap | images/board.png |
+| pixmap | images/board\_v1.png |
 
 (8) 2つ目のラベルを追加します。
 
@@ -100,7 +100,7 @@
 
 | ファイル名 | 説明 |
 ----|----
-| board.png | 5×5の将棋盤の画像 |
+| board\_v1.png | 5×5の将棋盤の画像 |
 | piece\_v2\_776\_636.png | 駒の画像 |
 
 (12) メインのコード move\_image\_with\_mouse.py を作成します。

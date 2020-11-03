@@ -75,7 +75,7 @@
 | 高さ | 570 |
 | font | Noto Sans CJK JP,9 |
 | text | テスト画像 |
-| pixmap | ../images/board.png |
+| pixmap | ../images/board\_v1.png |
 
 (8) image.ui という名前で保存します。
 
@@ -87,7 +87,7 @@
 
 | ファイル名 | 説明 |
 ----|----
-| board.png | 5×5の将棋盤の画像 |
+| board\_v1.png | 5×5の将棋盤の画像 |
 
 (11) メインのコード image.py を作成します。
 
