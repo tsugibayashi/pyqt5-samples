@@ -71,8 +71,8 @@
 | geometry | - |
 | X | 10 |
 | Y | 10 |
-| 幅 | 525 |
-| 高さ | 570 |
+| 幅 | 533 |
+| 高さ | 578 |
 | font | Noto Sans CJK JP,9 |
 | text | テスト画像 |
 | pixmap | ../images/board\_v1.png |

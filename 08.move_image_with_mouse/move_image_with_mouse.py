@@ -21,8 +21,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.piece_sizey = 106
 
         # ９一のマス目の左上の座標
-        self.minx = 30
-        self.miny = 30
+        self.minx = 34
+        self.miny = 34
 
         # 切り取る画像の始点 (先手の王)
         self.crop_posx = self.piece_sizex * 0

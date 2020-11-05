@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(10, 10, 525, 570))
+        self.label.setGeometry(QtCore.QRect(10, 10, 533, 578))
         self.label.setText("")
         self.label.setPixmap(QtGui.QPixmap("../images/board_v1.png"))
         self.label.setObjectName("label")

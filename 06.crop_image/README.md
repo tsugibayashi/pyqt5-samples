@@ -71,8 +71,8 @@
 | geometry | - |
 | X | 10 |
 | Y | 10 |
-| 幅 | 525 |
-| 高さ | 570 |
+| 幅 | 533 |
+| 高さ | 578 |
 | font | Noto Sans CJK JP,9 |
 | pixmap | ../images/board\_v1.png |
 
@@ -82,8 +82,8 @@
 ----|----
 | label\_2 | QLabel |
 | geometry | - |
-| X | 225 |
-| Y | 455 |
+| X | 229 |
+| Y | 459 |
 | 幅 | 97 |
 | 高さ | 106 |
 | font | Noto Sans CJK JP,9 |

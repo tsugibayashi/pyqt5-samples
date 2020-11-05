@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>545</width>
+    <height>630</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Noto Sans CJK JP</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>画像のテスト</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="board">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>533</width>
+      <height>578</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../images/board_v1.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="silver_black">
+    <property name="geometry">
+     <rect>
+      <x>229</x>
+      <y>459</y>
+      <width>97</width>
+      <height>106</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>先手の銀</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="silver_white">
+    <property name="geometry">
+     <rect>
+      <x>229</x>
+      <y>35</y>
+      <width>97</width>
+      <height>106</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>後手の銀</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="king_black">
+    <property name="geometry">
+     <rect>
+      <x>35</x>
+      <y>459</y>
+      <width>97</width>
+      <height>106</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>先手の王</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="king_white">
+    <property name="geometry">
+     <rect>
+      <x>423</x>
+      <y>35</y>
+      <width>97</width>
+      <height>106</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>後手の王</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gold_black">
+    <property name="geometry">
+     <rect>
+      <x>132</x>
+      <y>459</y>
+      <width>97</width>
+      <height>106</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>先手の金</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gold_white">
+    <property name="geometry">
+     <rect>
+      <x>326</x>
+      <y>35</y>
+      <width>97</width>
+      <height>106</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>後手の金</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="bishop_black">
+    <property name="geometry">
+     <rect>
+      <x>326</x>
+      <y>459</y>
+      <width>97</width>
+      <height>106</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>先手の角</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="bishop_white">
+    <property name="geometry">
+     <rect>
+      <x>132</x>
+      <y>35</y>
+      <width>97</width>
+      <height>106</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>後手の角</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="rook_black">
+    <property name="geometry">
+     <rect>
+      <x>423</x>
+      <y>459</y>
+      <width>97</width>
+      <height>106</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>先手の飛</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="rook_white">
+    <property name="geometry">
+     <rect>
+      <x>35</x>
+      <y>35</y>
+      <width>97</width>
+      <height>106</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>後手の飛</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pawn_black">
+    <property name="geometry">
+     <rect>
+      <x>35</x>
+      <y>353</y>
+      <width>97</width>
+      <height>106</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>先手の歩</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pawn_white">
+    <property name="geometry">
+     <rect>
+      <x>423</x>
+      <y>141</y>
+      <width>97</width>
+      <height>106</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>後手の歩</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="board_column">
+    <property name="geometry">
+     <rect>
+      <x>35</x>
+      <y>12</y>
+      <width>485</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../images/number_v1_485_19.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="board_row">
+    <property name="geometry">
+     <rect>
+      <x>522</x>
+      <y>35</y>
+      <width>22</width>
+      <height>530</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../images/number_v1_22_530.png</pixmap>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>545</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>ファイル</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>設定</string>
+    </property>
+    <addaction name="actionSetting"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <action name="actionExit">
+   <property name="text">
+    <string>終了</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Noto Sans CJK JP</family>
+    </font>
+   </property>
+  </action>
+  <action name="actionSetting">
+   <property name="text">
+    <string>表示設定</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Noto Sans CJK JP</family>
+    </font>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
